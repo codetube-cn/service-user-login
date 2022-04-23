@@ -1,0 +1,40 @@
+# MySQL 数据库连接信息
+mysql:
+  # 用户数据库
+  user:
+    # 主机
+    host:
+    # 端口
+    port: 53306
+    # 数据库
+    database:
+    # 账号
+    username:
+    # 密码
+    password:
+    # 最大空闲数
+    maxidle: 5
+    # 最大连接数
+    maxopen: 10
+# Redis 连接信息
+redis:
+  # 公共库
+  common:
+    # 主机
+    host:
+    # 端口
+    port: 6379
+    # 密码
+    password:
+    # 库号
+    db: 0
+  # 用户库
+  user:
+    # 主机
+    host: redis
+    # 端口
+    port: 6379
+    # 密码
+    password: 111111
+    # 库号
+    db: 1
