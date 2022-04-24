@@ -1,8 +1,10 @@
 package models
 
 import (
+	"github.com/dgrijalva/jwt-go"
 	"github.com/google/uuid"
 	"gorm.io/gorm"
+	"time"
 )
 
 // User 用户模型
@@ -24,4 +26,11 @@ type User struct {
 func (u *User) BeforeCreate(tx *gorm.DB) (err error) {
 	u.ID = uuid.New()
 	return
+}
+
+//UserClaims 用户 JWT 声明
+type UserClaims struct {
+	ID         string    `json:"id"`
+	CreateTime time.Time `json:"create_time"`
+	jwt.StandardClaims
 }

@@ -8,8 +8,9 @@ import (
 )
 
 type Config struct {
-	Mysql map[string]*config.MysqlConfig `yaml:"mysql"` //数据库连接配置
-	Redis map[string]*config.RedisConfig `yaml:"redis"`
+	JwtKey string                         `yaml:"jwt-key"` //jwt key
+	Mysql  map[string]*config.MysqlConfig `yaml:"mysql"`   //数据库连接配置
+	Redis  map[string]*config.RedisConfig `yaml:"redis"`   //缓存配置
 }
 
 // NewConfig 创建配置
